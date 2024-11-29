@@ -25,12 +25,15 @@
                     i = 0;
                 }
             }
-            setInterval(typing, 600)
+            setInterval(typing, 600)   
 
-            
-            
-
-           
+            // $('.bottom img').hover(function(){
+            //     $(this).attr('src','./img2/증명사진_-최종.png')
+            // })
+            // $('.bottom img').mouseleave(function(){
+            //     $(this).attr('src','./img2/증명사진최종.png')
+            // })
+                
         })
     </script>
     
@@ -47,7 +50,7 @@
         }
         #page1 {
             width: 100%;
-            height: 900px;
+            height: 100vh;
             background-color: #eeecee;
             position: relative;
 
@@ -81,7 +84,7 @@
         to {
          opacity: 0;
          }
-}
+        }
         .bottom {
             width: 100%;
             height: 70%;
@@ -95,8 +98,28 @@
             left: 50%;
             bottom: 0;
             margin-left: -200px;
+            filter: grayscale(0.5);
             transition: 1s;
-
+            animation-name: hyemin;
+            animation-duration:2s;
+            animation-duration: leaner;
+            animation-iteration-count:1;
+            animation-direction:alternate;
+            animation-fill-mode: forwards;
+            
+        }
+        @-webkit-keyframes hyemin {
+                0% {
+                    bottom:-480px;
+                }
+                100% {
+                    bottom:0px;
+                }
+                }
+        
+        .bottom img:hover {
+            filter: grayscale(0);
+            scale: 1.2;
         }
         .left {
             width: 200px;
@@ -107,6 +130,7 @@
             left: 10%;
             top: 50%;
             margin-top: -50px;
+            transition: 1s;
         }
         .left>ul>li>a {
             display: block;
@@ -128,6 +152,7 @@
             right: 10%;
             top: 50%;
             margin-top: -50px;
+            transition: 1s;
         }
         .right>ul>li>a {
             display: block;
@@ -151,7 +176,7 @@
                       </div>
                 </div>
                 <div class="bottom">
-                    <a href="#none"><img src="./img2/증명사진최종.png" alt="증명사진"></a>
+                    <a href="#none"><img src="./img2/증명사진_-최종.png" alt="증명사진"></a>
                 </div>
                 <div class="left">
                     <ul>
