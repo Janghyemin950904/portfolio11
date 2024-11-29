@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://img.freepik.com/free-photo/white-blank-background-texture_53876-98165.jpg">
+    <meta property="og:title" content="장혜민 포토폴리오 입니다.">
+    <title>장혜민 포토폴리오</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+    <script src="./js/jquery-1.12.3.js"></script>
+    <script>
+        $(function(){
+            setInterval(typing, 200)
+            const content = "Hi. I'm Hyemin, \n Web Designer MD.";
+            const text = document.querySelector(".text");
+            let i = 0;
+
+            function typing() {
+                let txt = content[i++];
+                text.innerHTML += txt === "\n" ? "<br/>" : txt;
+                if (i > content.length) {
+                    text.textContent = "";
+                    i = 0;
+                }
+            }
+            setInterval(typing, 600)   
+
+            $('.middle>p').hide();
+            $('.bottom').mouseover(function(){
+                $('.middle>p').slideDown(1000);
+            })
+            $('.bottom').mouseleave(function(){
+                $('.middle>p').hide();
+            })
+        })
+    </script>
+    
+    <script>
+            
+    </script>
+    <style>
+        * {margin: 0; padding: 0; box-sizing: border-box; color: #333; font-family: 'NanumSquareRound';}
+        ul {list-style: none;}
+        a {text-decoration: none; color: inherit;}
+        #wrap {
+            width: 1400px;
+            margin: 0 auto;
+        }
+        #page1 {
+            width: 100%;
+            height: 100vh;
+            background-color: #eeecee;
+            position: relative;
+
+        }
+        .top {
+            width: 100%;
+            height: 30%;
+            margin: 0 auto;
+        }
+        
+        .text_box {
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            position:relative;
+            top: 200px;
+        }
+        .text {
+            width: 500px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .blink {
+          animation: blink 0.5s infinite;
+         font-size: 2.5rem;
+        }
+
+        @keyframes blink {
+        to {
+         opacity: 0;
+         }
+        }
+        .bottom {
+            width: 100%;
+            height: 70%;
+            margin: 0 auto;
+
+        }
+        .bottom img {
+            width: 400px;
+            height: 480px;
+            position:absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -200px;
+            filter: grayscale(0.5);
+            transition: 1s;
+            animation-name: hyemin;
+            animation-duration:2s;
+            animation-duration: leaner;
+            animation-iteration-count:1;
+            animation-direction:alternate;
+            animation-fill-mode: forwards;
+            
+        }
+        @-webkit-keyframes hyemin {
+                0% {
+                    bottom:-480px;
+                }
+                100% {
+                    bottom:0px;
+                }
+                }
+        
+        .bottom img:hover {
+            filter: grayscale(0);
+            scale: 1.1;
+        }
+        .left {
+            width: 200px;
+            height: 100px;
+            background-color: #111;
+            border-radius: 200px;
+            position:absolute;
+            left: 10%;
+            top: 50%;
+            margin-top: -50px;
+            transition: 1s;
+        }
+        .left>ul>li>a {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .left:hover {
+            opacity: 0.5;
+            scale: 1.1;
+        }
+        .right {
+            width: 200px;
+            height: 100px;
+            background-color: #111;
+            border-radius: 200px;
+            position:absolute;
+            right: 10%;
+            top: 50%;
+            margin-top: -50px;
+            transition: 1s;
+        }
+        .right>ul>li>a {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        .right:hover {
+            opacity: 0.5;
+            scale: 1.1;
+        }
+        .middle {
+            width: 350px;
+            height: 100px;
+        }
+        .middle>p {
+            text-align: center;
+            font-size: 18px;
+            height: 30px;
+            line-height: 30px;
+            font-weight: bold;
+            position:absolute;
+            top: 35%;
+            left: 40%;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="page1">
+                <div class="top">
+                    <div class="text_box">
+                        <span class="text"></span><span class="blink">|</span>
+                      </div>
+                </div>
+                <div class="bottom">
+                    <a href="#none"><img src="./img2/증명사진_-최종.png" alt="증명사진"></a>
+                </div>
+                <div class="left">
+                    <ul>
+                        <li><a href="#none">About me</a></li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li><a href="#none">Referenced</a></li>
+                    </ul>
+                </div>
+                <div class="middle">
+                    <p>"MD의 분석력과 디자이너의 감각을 하나로, <br>세상을 움직이는 페이지를 만듭니다." </p>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
