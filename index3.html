@@ -1,29 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://img.freepik.com/free-photo/white-blank-background-texture_53876-98165.jpg">
+    <meta property="og:image"
+        content="https://img.freepik.com/free-photo/white-blank-background-texture_53876-98165.jpg">
     <meta property="og:title" content="장혜민 포토폴리오 입니다.">
     <title>장혜민 포토폴리오</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
     <script src="./js/jquery-1.12.3.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
 
-   
+
 
     <script>
-       
-        $(function(){
+
+        $(function () {
             setInterval(typing, 200)
             const content = "Hi. I'm Hyemin, \n Web Designer MD.";
             const text = document.querySelector(".text");
             let i = 0;
-            
+
 
             function typing() {
                 let txt = content[i++];
@@ -33,81 +36,98 @@
                     i = 0;
                 }
             }
-            setInterval(typing, 600)   
+            setInterval(typing, 600)
 
             // 첫페이지 중간글씨
             $('.middle>p').hide();
-            $('.bottom').mouseover(function(){
+            $('.bottom').mouseover(function () {
                 $('.middle>p').slideDown(1000);
             })
 
             // 첫페이지 증명사진
-          
 
 
 
 
 
-            $(document).ready(function(){
+
+            $(document).ready(function () {
                 $(".slider").bxSlider();
             });
 
-            $('.box1>h2').click(function(){
-                window.open('./img/조말론최종.jpg','_blank')
+            $('.box1>h2').click(function () {
+                window.open('./img/조말론최종.jpg', '_blank')
             })
-            $('.box2>h2').click(function(){
-                window.open('./img/제주꿀감귤상세페이지.jpg','_blank')
+            $('.box2>h2').click(function () {
+                window.open('./img/제주꿀감귤상세페이지.jpg', '_blank')
             })
-            $('.box3>h2').click(function(){
-                window.open('./img/설렁탕상세페이지.jpg','_blank')
+            $('.box3>h2').click(function () {
+                window.open('./img/설렁탕상세페이지.jpg', '_blank')
             })
 
 
-          
-            $('#page2').mouseover(function(){
-                $('.container').each(function(i){
+
+            $('#page2').mouseover(function () {
+                $('.container').each(function (i) {
                     var skill = $(this).find('.skills');//this=.container 안에 있는 .skill의 값을 읽어서 skill이라는 값에 넣어라
                     var percent = skill.text(); //skill에 들어있는 값을 percent라는 변수에 넣어라
 
-                    skill.delay(i*500).animate({'width':percent});//skill을 애니메이트하겠다. percent에 들어있는 값만큼
-                    
+                    skill.delay(i * 500).animate({ 'width': percent });//skill을 애니메이트하겠다. percent에 들어있는 값만큼
+
                 });
-            })  
+            })
 
         })
     </script>
     <script>
-         
+
     </script>
     <style>
-        * {margin: 0; padding: 0; box-sizing: border-box; color: #333; font-family: 'NanumSquareRound';}
-        ul {list-style: none;}
-        a {text-decoration: none; color: inherit;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            font-family: 'NanumSquareRound';
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
         #wrap {
             width: 100%;
-            background-color: #eeecee;
+            background-color: #F5EFFF;
         }
+
         #page1 {
             width: 1400px;
             height: 100vh;
             margin: 0 auto;
-           
+
             position: relative;
 
         }
+
         .top {
             width: 100%;
             height: 20%;
             margin: 0 auto;
         }
-        
+
         .text_box {
             width: 100%;
             height: 200px;
             text-align: center;
-            position:relative;
+            position: relative;
             top: 150px;
         }
+
         .text {
             width: 500px;
             height: 50px;
@@ -115,60 +135,77 @@
             font-size: 40px;
             font-weight: bold;
         }
+
         .blink {
-          animation: blink 0.5s infinite;
-         font-size: 2.5rem;
+            animation: blink 0.5s infinite;
+            font-size: 2.5rem;
         }
 
         @keyframes blink {
-        to {
-         opacity: 0;
-         }
+            to {
+                opacity: 0;
+            }
         }
+
         .bottom {
             width: 100%;
             height: 70%;
             margin: 0 auto;
 
         }
+
         .bottom img {
             max-width: 25%;
-            position:absolute;
+            position: absolute;
             left: 50%;
             bottom: 0;
             margin-left: -150px;
             transition: 1s;
             animation-name: hyemin;
-            animation-duration:2s;
+            animation-duration: 2s;
             animation-duration: leaner;
-            animation-iteration-count:1;
-            animation-direction:alternate;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
             animation-fill-mode: forwards;
-            
+
         }
+
         @-webkit-keyframes hyemin {
-                0% {opacity: 0;}            
-                25% {opacity: 0;}
-                50% {opacity: 0;}
-                100% {opacity: 1;}
-                }
-        
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
         .bottom img:hover {
             filter: grayscale(0);
             scale: 1.1;
         }
+
         .left {
             width: 200px;
             height: 100px;
             background-color: #111;
             border-radius: 200px;
-            position:absolute;
+            position: absolute;
             left: 10%;
             top: 50%;
             margin-top: -50px;
             transition: 1s;
             box-shadow: 2px 3px #888888;
         }
+
         .left>ul>li>a {
             display: block;
             text-align: center;
@@ -177,22 +214,25 @@
             font-size: 30px;
             font-weight: bolder;
         }
+
         .left:hover {
             opacity: 0.5;
             scale: 1.1;
         }
+
         .right {
             width: 200px;
             height: 100px;
             background-color: #111;
             border-radius: 200px;
-            position:absolute;
+            position: absolute;
             right: 10%;
             top: 50%;
             margin-top: -50px;
             transition: 1s;
             box-shadow: 2px 3px #888888;
         }
+
         .right>ul>li>a {
             display: block;
             text-align: center;
@@ -201,99 +241,131 @@
             font-size: 30px;
             font-weight: bolder;
         }
+
         .right:hover {
             opacity: 0.5;
             scale: 1.1;
         }
+
         .middle {
             width: 350px;
             height: 100px;
         }
+
         .middle>p {
             text-align: center;
             font-size: 18px;
             height: 30px;
             line-height: 30px;
             font-weight: bold;
-            position:absolute;
+            position: absolute;
             top: 35%;
             left: 40%;
             z-index: 1;
         }
 
+
         /* page3 */
         #page3 {
             width: 100%;
             height: 900px;
-            background-color: #e1e1e1;
+            background-color: #fff;
         }
+
         .content1 {
             width: 1200px;
             height: 800px;
             margin: 0 auto;
             position: relative;
         }
+
         #page3 div ul h2:hover {
-            opacity: 0.5;
+
             transition: 1s;
-            background-color: antiquewhite;
+            background-color: rgb(213, 213, 252);
             color: #111;
         }
+
         #page3 img {
-           width: 400px;
-           height: 500px;
-           margin-left: 100px;
-           padding: 50px;
-           border-radius: 100px;
+            width: 400px;
+            height: 500px;
+            margin-left: 100px;
+            padding: 50px;
+            border-radius: 100px;
         }
+
         #page3 img:hover {
             opacity: 0.5;
             transition: 1.2s;
         }
-        .box1 , .box2, .box3 {
+
+        .box1,
+        .box2,
+        .box3 {
             position: absolute;
             top: 30%;
             left: 50%;
         }
-        .box1>h2, .box2>h2 , .box3>h2 {
+
+        .box1>h2,
+        .box2>h2,
+        .box3>h2 {
             display: block;
             width: 300px;
             height: 40px;
             line-height: 40px;
-            background-color: #333;
+            background-color: #111;
             color: #fff;
             text-align: center;
             border-radius: 100px;
             margin-bottom: 40px;
             cursor: pointer;
             box-shadow: 2px 3px #888888;
-        }   
-       
-        .box1>ul>li , .box2>ul>li, .box3>ul>li {
+        }
+
+        .box1>ul>li,
+        .box2>ul>li,
+        .box3>ul>li {
             margin-bottom: 20px;
         }
-        .box1>ul>li>a, .box2>ul>li>a , .box3>ul>li>a {
+
+        .box1>ul>li>a,
+        .box2>ul>li>a,
+        .box3>ul>li>a {
             display: block;
             line-height: 30px;
         }
+
+        .bx-wrapper {
+            box-shadow: 1px 2px 10px #A594F9;
+            margin-top: 100px;
+            border-radius: 50px;
+        }
+
         /* page2 */
         #wrap2 {
             width: 100%;
-            background-color: #e9e9e9;
+            background-color: #E5E0FF;
         }
+
         #page2 {
             display: flex;
             flex-flow: row wrap;
-            width: 1200px;
+            width: 1400px;
             margin: 0 auto;
-        }
-        .profile {
-            width: 50%;
-            height: 300px;
-            margin-top: 200px;
             
         }
-        .profile>h2 , .charset>h2, .edu>h2{
+
+        .profile {
+            width: 50%;
+            height: 350px;
+            margin-top: 200px;
+
+        }
+
+        .profile>h2,
+        .charset>h2,
+        .edu>h2 {
             width: 200px;
             height: 40px;
             line-height: 40px;
@@ -307,6 +379,7 @@
             cursor: pointer;
 
         }
+
         .skill>h2 {
             width: 200px;
             height: 40px;
@@ -317,54 +390,98 @@
             border-radius: 100px;
             margin-bottom: 50px;
             box-shadow: 2px 3px #888;
-            cursor: pointer;  
+            cursor: pointer;
             margin-left: 200px;
         }
+
         #page2 h2:hover {
             opacity: 0.5;
             transition: 1.2s;
         }
+
         #page2 div ul li a:hover {
             font-weight: bold;
             font-size: 18px;
             transition: 1s;
         }
-        .profile>ul , .charset>ul, .skill>ul, .edu>ul {
+
+        .profile>ul,
+        .charset>ul,
+        .skill>ul,
+        .edu>ul {
             width: 400px;
             margin: 0 auto;
         }
-        .profile span , .charset span, .skill span, .edu span {
+
+        .profile span,
+        .charset span,
+        .skill span,
+        .edu span {
             font-weight: bold;
-            
+
         }
-        .profile>ul>li, .charset>ul>li, .skill>ul>li, .edu>ul>li {
+
+        .profile>ul>li,
+        .charset>ul>li,
+        .edu>ul>li {
             margin-bottom: 20px;
+
         }
-        .profile>ul>li>a, .charset>ul>li>a, .edu>ul>li>a  {
+
+        .profile>ul>li>a {
+            width: 300px;
+            height: 30px;
+            border: 1px solid #cacaca;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 1px 2px #888;
+            padding-left: 10px;
+
+        }
+
+        .profile>ul>li>a,
+        .charset>ul>li>a,
+        .edu>ul>li>a {
             display: block;
-            height: 20px;
-            line-height: 20px;
+            line-height: 40px;
+            height: 40px;
         }
 
         .charset {
             margin-top: 200px;
             width: 50%;
-            height: 300px;
+            height: 350px;
         }
+
         .charset>ul {
             display: flex;
             flex-flow: row wrap;
+
         }
+
         .charset>ul>li {
             width: 100px;
+            margin-left: 10px;
         }
+
+        .charset>ul>li>a {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #cacaca;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 1px 2px #888;
+            padding-left: 10px;
+        }
+
         .skill {
-            width: 100%;
+            width: 80%;
             height: 300px;
             margin: 100px 0px;
-            
+
         }
-        
+
         /* .edu {
             width: 50%;
             height: 300px;
@@ -376,6 +493,7 @@
             width: 100%;
             margin-left: 100px;
         }
+
         .skillbox>ul>li {
             width: 250px;
             height: 100px;
@@ -384,17 +502,20 @@
             border: 1px solid #cacaca;
             background-color: #fff;
             border-radius: 20px;
-            box-shadow: 1px 2px #888;        
+            box-shadow: 1px 2px #888;
         }
+
         .skillbox img {
             width: 40px;
             height: 40px;
             margin-top: 10px;
         }
+
         .skillbox>ul>li>a {
             display: flex;
             margin-left: 30px;
         }
+
         .skillbox>ul>li>a>span {
             display: block;
             height: 40px;
@@ -402,6 +523,7 @@
             margin-top: 10px;
             margin-left: 5px;
         }
+
         .container {
             width: 80%;
             height: 25px;
@@ -410,6 +532,7 @@
             margin-top: 5px;
             border-radius: 50px;
         }
+
         .skills {
             text-align: right;
             padding-top: 10px;
@@ -417,44 +540,66 @@
             color: #fff;
             font-size: 12px;
         }
-        .html , .photo, .illu, .figma, .css, .js, .jquery {
+
+        .html,
+        .photo,
+        .illu,
+        .figma,
+        .css,
+        .js,
+        .jquery {
             width: 0%;
-            background-color: #646464;
+            background-color: #111;
             height: 25px;
             border-radius: 50px;
         }
 
+        .bx-wrapper .bx-pager.bx-default-pager a.active,
+        .bx-wrapper .bx-pager.bx-default-pager a:focus,
+        .bx-wrapper .bx-pager.bx-default-pager a:hover {
+            background-color: #A594F9;
+        }
+        .bx-wrapper .bx-pager.bx-default-pager a {
+            background-color: #E5D9F2;
+        }
+        .bx-wrapper .bx-prev {
+            filter:invert(59%) sepia(41%) saturate(389%) hue-rotate(232deg) brightness(93%) contrast(80%);
+        }
+        .bx-wrapper .bx-next {
+            filter:invert(59%) sepia(41%) saturate(389%) hue-rotate(232deg) brightness(93%) contrast(80%);
+        }
     </style>
 </head>
+
 <body>
     <div id="wrap">
         <!-- page1 -->
         <div id="page1">
-                <div class="top">
-                    <div class="text_box">
-                        <span class="text"></span><span class="blink">|</span>
-                      </div>
+            <div class="top">
+                <div class="text_box">
+                    <span class="text"></span><span class="blink">|</span>
                 </div>
-                <div class="bottom">
-                    <a href="#none"><img src="./img2/증명사진_-최종.png" alt="증명사진"></a>
-                </div>
-                <div class="left">
-                    <ul>
-                        <li><a href="#page2">About me</a></li>
-                    </ul>
-                </div>
-                <div class="right">
-                    <ul>
-                        <li><a href="#page3">Referenced</a></li>
-                    </ul>
-                </div>
-                <div class="middle">
-                    <p>"MD의 분석력과 디자이너의 감각을 하나로, <br>세상을 움직이는 페이지를 만듭니다." </p>
-                </div>
+            </div>
+            <div class="bottom">
+                <a href="#none"><img src="./img2/증명사진_-최종.png" alt="증명사진"></a>
+            </div>
+            <div class="left">
+                <ul>
+                    <li><a href="#page2">About me</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#page3">Referenced</a></li>
+                </ul>
+            </div>
+            <div class="middle">
+                <p>"MD의 분석력과 디자이너의 감각을 하나로, <br>세상을 움직이는 페이지를 만듭니다." </p>
+            </div>
         </div>
     </div>
-        <!-- page2 -->
-        <div id="wrap2">
+    <!-- page2 -->
+    <div id="wrap2">
         <div id="page2">
             <div class="profile">
                 <h2>Profile</h2>
@@ -476,65 +621,65 @@
                     <li><a href="#none"><span>#</span> 멍집사</a></li>
                 </ul>
             </div>
-            <div class="skill">        
+            <div class="skill">
                 <h2>Skill</h2>
                 <div class="skillbox">
                     <ul>
                         <li>
                             <a href="#none"><img src="./img/illustrator_5968472.png" alt="일러스트아이콘">
-                            <span>Adobe Illustrator</span></a>
+                                <span>Adobe Illustrator</span></a>
                             <div class="container">
                                 <div class="skills illu">90%</div>
                             </div>
                         </li>
                         <li>
                             <a href="#none"><img src="./img/photoshop_5968520.png" alt="포토샵아이콘">
-                            <span>Adobe Photoshop</span></a>
+                                <span>Adobe Photoshop</span></a>
                             <div class="container">
                                 <div class="skills photo">95%</div>
                             </div>
                         </li>
                         <li>
                             <a href="#none"><img src="./img/figma_5968705.png" alt="피그마아이콘">
-                            <span>Figma</span></a> 
+                                <span>Figma</span></a>
                             <div class="container">
                                 <div class="skills figma">80%</div>
                             </div>
                         </li>
-                        <li> 
+                        <li>
                             <a href="#none"><img src="./img/html-5_5968267.png" alt="html아이콘">
-                            <span>HTML</span></a>
+                                <span>HTML</span></a>
                             <div class="container">
                                 <div class="skills html">95%</div>
                             </div>
                         </li>
                         <li>
                             <a href="#none"><img src="./img/css-3_5968242.png" alt="css아이콘">
-                            <span>CSS</span></a>
+                                <span>CSS</span></a>
                             <div class="container">
                                 <div class="skills css">98%</div>
                             </div>
                         </li>
                         <li>
                             <a href="#none"><img src="./img/js_5968292.png" alt="js아이콘">
-                            <span>Java script</span></a>
+                                <span>Java script</span></a>
                             <div class="container">
                                 <div class="skills js">75%</div>
                             </div>
                         </li>
                         <li>
                             <a href="#none"><img src="./img/jquery.png" alt="jquery아이콘">
-                            <span>Jquery</span></a>
+                                <span>Jquery</span></a>
                             <div class="container">
                                 <div class="skills jquery">80%</div>
                             </div>
                         </li>
                     </ul>
                 </div>
-                   
-                  
 
-                   
+
+
+
 
             </div>
             <!-- <div class="edu">
@@ -548,47 +693,49 @@
             </div> -->
         </div>
     </div>
-        <!-- page3 -->
-        <div id="page3">
-            <div class="content1">
+    <!-- page3 -->
+    <div id="page3">
+        <div class="content1">
 
-                <ul class="slider">
-                    <li><img src="./img/조말론표지최종.jpg" alt="조말론표지최종">
-                        <div class="box1">
-                            <h2>상세페이지 바로가기</h2>
-                            <ul>
-                                <li><a href="#none">"JOMALONE 리뉴얼 상세페이지"</a></li>
-                                <li><a href="#none">"기존 상세페이지의 적은 이미지와 가독성이 떨어지는 부분을 <br>보안하여 리뉴얼 디자인 하였습니다.
+            <ul class="slider">
+                <li><img src="./img/조말론표지최종.jpg" alt="조말론표지최종">
+                    <div class="box1">
+                        <h2>상세페이지 바로가기</h2>
+                        <ul>
+                            <li><a href="#none">"JOMALONE 리뉴얼 상세페이지"</a></li>
+                            <li><a href="#none">"기존 상세페이지의 적은 이미지와 가독성이 떨어지는 부분을 <br>보안하여 리뉴얼 디자인 하였습니다.
                                     차분한 분위기와 세련된 느낌을 강조하여 <br>고급스러운 느낌을 전달 될 수 있도록 하였습니다."</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><img src="./img/제주꿀감귤표지.jpg" alt="감귤표지">
-                        <div class="box2">
-                            <h2>상세페이지 바로가기</h2>
-                            <ul>
-                                <li><a href="#none">"제주 꿀감귤 상세페이지"</a></li>
-                                <li><a href="#none">"스마트스토어 외 플랫폼 판매를 위한 상세페이지 기획 + 디자인 작업하였습니다. "</a></li>
-                                <li><a href="#none">"따뜻하고 밝은 느낌, 과일의 특징, 농장 직송 등 농부의 진심을 담은 포인트를 <br> 임팩트 있게 전달 될 수 있도록 하였습니다.  "</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li><img src="./img/비비고설렁탕표지.jpg" alt="설렁탕표지">
-                        <div class="box3">
-                            <h2>상세페이지 바로가기</h2>
-                            <ul>
-                                <li><a href="#none">"비비고 설렁탕 리뉴얼 상세페이지"</a></li>
-                                <li><a href="#none">"친화적인 경험을 제공하는데 중점을 두어 디자인 작업하였습니다. "</a></li>
-                                <li><a href="#none">"나무 질감의 배경과 따뜻한 색상으로 전통의 느낌과 편안함을 주었고, <br>
-                                     판매 건수를 눈에 띄게 표시하여 신뢰성을 줄 수 있도록 하였습니다. "</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+                        </ul>
+                    </div>
+                </li>
+                <li><img src="./img/제주꿀감귤표지.jpg" alt="감귤표지">
+                    <div class="box2">
+                        <h2>상세페이지 바로가기</h2>
+                        <ul>
+                            <li><a href="#none">"제주 꿀감귤 상세페이지"</a></li>
+                            <li><a href="#none">"스마트스토어 외 플랫폼 판매를 위한 상세페이지 기획 + 디자인 작업하였습니다. "</a></li>
+                            <li><a href="#none">"따뜻하고 밝은 느낌, 과일의 특징, 농장 직송 등 농부의 진심을 담은 포인트를 <br> 임팩트 있게 전달 될 수 있도록
+                                    하였습니다. "</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><img src="./img/비비고설렁탕표지.jpg" alt="설렁탕표지">
+                    <div class="box3">
+                        <h2>상세페이지 바로가기</h2>
+                        <ul>
+                            <li><a href="#none">"비비고 설렁탕 리뉴얼 상세페이지"</a></li>
+                            <li><a href="#none">"친화적인 경험을 제공하는데 중점을 두어 디자인 작업하였습니다. "</a></li>
+                            <li><a href="#none">"나무 질감의 배경과 따뜻한 색상으로 전통의 느낌과 편안함을 주었고, <br>
+                                    판매 건수를 눈에 띄게 표시하여 신뢰성을 줄 수 있도록 하였습니다. "</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
 
 
-            </div>
         </div>
+    </div>
 
 </body>
+
 </html>
