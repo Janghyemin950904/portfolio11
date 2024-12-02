@@ -17,11 +17,13 @@
    
 
     <script>
+       
         $(function(){
             setInterval(typing, 200)
             const content = "Hi. I'm Hyemin, \n Web Designer MD.";
             const text = document.querySelector(".text");
             let i = 0;
+            
 
             function typing() {
                 let txt = content[i++];
@@ -33,10 +35,18 @@
             }
             setInterval(typing, 600)   
 
+            // 첫페이지 중간글씨
             $('.middle>p').hide();
             $('.bottom').mouseover(function(){
                 $('.middle>p').slideDown(1000);
             })
+
+            // 첫페이지 증명사진
+          
+
+
+
+
 
             $(document).ready(function(){
                 $(".slider").bxSlider();
@@ -51,24 +61,37 @@
             $('.box3>h2').click(function(){
                 window.open('./img/설렁탕상세페이지.jpg','_blank')
             })
-            
+
+
+          
+            $('#page2').mouseover(function(){
+                $('.container').each(function(i){
+                    var skill = $(this).find('.skills');//this=.container 안에 있는 .skill의 값을 읽어서 skill이라는 값에 넣어라
+                    var percent = skill.text(); //skill에 들어있는 값을 percent라는 변수에 넣어라
+
+                    skill.delay(i*500).animate({'width':percent});//skill을 애니메이트하겠다. percent에 들어있는 값만큼
+                    
+                });
+            })  
 
         })
     </script>
-    
+    <script>
+         
+    </script>
     <style>
         * {margin: 0; padding: 0; box-sizing: border-box; color: #333; font-family: 'NanumSquareRound';}
-        body {background-color: #eeecee;}
         ul {list-style: none;}
         a {text-decoration: none; color: inherit;}
         #wrap {
-            width: 1400px;
-            margin: 0 auto;
+            width: 100%;
+            background-color: #eeecee;
         }
         #page1 {
-            width: 100%;
+            width: 1400px;
             height: 100vh;
-            background-color: #eeecee;
+            margin: 0 auto;
+           
             position: relative;
 
         }
@@ -109,13 +132,11 @@
 
         }
         .bottom img {
-            width: 400px;
-            height: 480px;
+            max-width: 25%;
             position:absolute;
             left: 50%;
             bottom: 0;
-            margin-left: -200px;
-            @filter: grayscale(0.5);
+            margin-left: -150px;
             transition: 1s;
             animation-name: hyemin;
             animation-duration:2s;
@@ -126,12 +147,10 @@
             
         }
         @-webkit-keyframes hyemin {
-                0% {
-                    bottom:-480px;
-                }
-                100% {
-                    bottom:0px;
-                }
+                0% {opacity: 0;}            
+                25% {opacity: 0;}
+                50% {opacity: 0;}
+                100% {opacity: 1;}
                 }
         
         .bottom img:hover {
@@ -148,6 +167,7 @@
             top: 50%;
             margin-top: -50px;
             transition: 1s;
+            box-shadow: 2px 3px #888888;
         }
         .left>ul>li>a {
             display: block;
@@ -171,6 +191,7 @@
             top: 50%;
             margin-top: -50px;
             transition: 1s;
+            box-shadow: 2px 3px #888888;
         }
         .right>ul>li>a {
             display: block;
@@ -204,12 +225,19 @@
         #page3 {
             width: 100%;
             height: 900px;
+            background-color: #e1e1e1;
         }
         .content1 {
             width: 1200px;
             height: 800px;
             margin: 0 auto;
             position: relative;
+        }
+        #page3 div ul h2:hover {
+            opacity: 0.5;
+            transition: 1s;
+            background-color: antiquewhite;
+            color: #111;
         }
         #page3 img {
            width: 400px;
@@ -238,6 +266,7 @@
             border-radius: 100px;
             margin-bottom: 40px;
             cursor: pointer;
+            box-shadow: 2px 3px #888888;
         }   
        
         .box1>ul>li , .box2>ul>li, .box3>ul>li {
@@ -245,9 +274,13 @@
         }
         .box1>ul>li>a, .box2>ul>li>a , .box3>ul>li>a {
             display: block;
-            line-height: 20px;
+            line-height: 30px;
         }
         /* page2 */
+        #wrap2 {
+            width: 100%;
+            background-color: #e9e9e9;
+        }
         #page2 {
             display: flex;
             flex-flow: row wrap;
@@ -260,7 +293,7 @@
             margin-top: 200px;
             
         }
-        .profile>h2 , .charset>h2, .skill>h2, .edu>h2{
+        .profile>h2 , .charset>h2, .edu>h2{
             width: 200px;
             height: 40px;
             line-height: 40px;
@@ -270,7 +303,31 @@
             border-radius: 100px;
             margin: 0 auto;
             margin-bottom: 50px;
+            box-shadow: 2px 3px #888;
+            cursor: pointer;
 
+        }
+        .skill>h2 {
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            border-radius: 100px;
+            margin-bottom: 50px;
+            box-shadow: 2px 3px #888;
+            cursor: pointer;  
+            margin-left: 200px;
+        }
+        #page2 h2:hover {
+            opacity: 0.5;
+            transition: 1.2s;
+        }
+        #page2 div ul li a:hover {
+            font-weight: bold;
+            font-size: 18px;
+            transition: 1s;
         }
         .profile>ul , .charset>ul, .skill>ul, .edu>ul {
             width: 400px;
@@ -283,11 +340,12 @@
         .profile>ul>li, .charset>ul>li, .skill>ul>li, .edu>ul>li {
             margin-bottom: 20px;
         }
-        .profile>ul>li>a, .charset>ul>li>a, .skill>ul>li>a, .edu>ul>li>a  {
+        .profile>ul>li>a, .charset>ul>li>a, .edu>ul>li>a  {
             display: block;
             height: 20px;
             line-height: 20px;
         }
+
         .charset {
             margin-top: 200px;
             width: 50%;
@@ -301,28 +359,71 @@
             width: 100px;
         }
         .skill {
+            width: 100%;
+            height: 300px;
+            margin: 100px 0px;
+            
+        }
+        
+        /* .edu {
             width: 50%;
             height: 300px;
             margin-bottom: 200px;
-        }
-        .skill img {
-            width: 60px;
-            height: 60px;
-            margin: 10px;
-        }
-        .skill>ul {
+        } */
+        .skillbox>ul {
             display: flex;
             flex-flow: row wrap;
+            width: 100%;
+            margin-left: 100px;
         }
-        .skill>ul>li {
-            width: 80px;
-            height: 80px;
+        .skillbox>ul>li {
+            width: 250px;
+            height: 100px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            border: 1px solid #cacaca;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 1px 2px #888;        
         }
-        .edu {
-            width: 50%;
-            height: 300px;
-            margin-bottom: 200px;
+        .skillbox img {
+            width: 40px;
+            height: 40px;
+            margin-top: 10px;
         }
+        .skillbox>ul>li>a {
+            display: flex;
+            margin-left: 30px;
+        }
+        .skillbox>ul>li>a>span {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        .container {
+            width: 80%;
+            height: 25px;
+            background-color: #ddd;
+            margin: 0 auto;
+            margin-top: 5px;
+            border-radius: 50px;
+        }
+        .skills {
+            text-align: right;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: #fff;
+            font-size: 12px;
+        }
+        .html , .photo, .illu, .figma, .css, .js, .jquery {
+            width: 0%;
+            background-color: #646464;
+            height: 25px;
+            border-radius: 50px;
+        }
+
     </style>
 </head>
 <body>
@@ -351,7 +452,9 @@
                     <p>"MD의 분석력과 디자이너의 감각을 하나로, <br>세상을 움직이는 페이지를 만듭니다." </p>
                 </div>
         </div>
+    </div>
         <!-- page2 -->
+        <div id="wrap2">
         <div id="page2">
             <div class="profile">
                 <h2>Profile</h2>
@@ -373,20 +476,68 @@
                     <li><a href="#none"><span>#</span> 멍집사</a></li>
                 </ul>
             </div>
-            <div class="skill">
+            <div class="skill">        
                 <h2>Skill</h2>
-                <ul>
-                    <li><a href="#none"><img src="./img/photoshop_5968520.png" alt="포토샵아이콘"></a></li>
-                    <li><a href="#none"><img src="./img/illustrator_5968472.png" alt="일러스트아이콘"></a></li>
-                    <li><a href="#none"><img src="./img/figma_5968705.png" alt="피그마아이콘"></a></li>
-                    <li><a href="#none"><img src="./img/html-5_5968267.png" alt="html아이콘"></a></li>
-                    <li><a href="#none"><img src="./img/css-3_5968242.png" alt="css아이콘"></a></li>
-                    <li><a href="#none"><img src="./img/js_5968292.png" alt="js아이콘"></a></li>
-                    <li><a href="#none"><img src="./img/jquery.png" alt="jquery아이콘"></a></li>
+                <div class="skillbox">
+                    <ul>
+                        <li>
+                            <a href="#none"><img src="./img/illustrator_5968472.png" alt="일러스트아이콘">
+                            <span>Adobe Illustrator</span></a>
+                            <div class="container">
+                                <div class="skills illu">90%</div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none"><img src="./img/photoshop_5968520.png" alt="포토샵아이콘">
+                            <span>Adobe Photoshop</span></a>
+                            <div class="container">
+                                <div class="skills photo">95%</div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none"><img src="./img/figma_5968705.png" alt="피그마아이콘">
+                            <span>Figma</span></a> 
+                            <div class="container">
+                                <div class="skills figma">80%</div>
+                            </div>
+                        </li>
+                        <li> 
+                            <a href="#none"><img src="./img/html-5_5968267.png" alt="html아이콘">
+                            <span>HTML</span></a>
+                            <div class="container">
+                                <div class="skills html">95%</div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none"><img src="./img/css-3_5968242.png" alt="css아이콘">
+                            <span>CSS</span></a>
+                            <div class="container">
+                                <div class="skills css">98%</div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none"><img src="./img/js_5968292.png" alt="js아이콘">
+                            <span>Java script</span></a>
+                            <div class="container">
+                                <div class="skills js">75%</div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#none"><img src="./img/jquery.png" alt="jquery아이콘">
+                            <span>Jquery</span></a>
+                            <div class="container">
+                                <div class="skills jquery">80%</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                   
+                  
 
-                </ul>
+                   
+
             </div>
-            <div class="edu">
+            <!-- <div class="edu">
                 <h2>Education</h2>
                 <ul>
                     <li><a href="#none"><span>Name :</span> 장혜민</a></li>
@@ -394,8 +545,9 @@
                     <li><a href="#none"><span>Number :</span> 010-8477-4460</a></li>
                     <li><a href="#none"><span>Adress :</span> 경기도 고양시 일산동구 백석동</a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
+    </div>
         <!-- page3 -->
         <div id="page3">
             <div class="content1">
@@ -437,6 +589,6 @@
 
             </div>
         </div>
-    </div>
+
 </body>
 </html>
