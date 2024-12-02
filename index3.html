@@ -10,6 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
     <script src="./js/jquery-1.12.3.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+
+   
+
     <script>
         $(function(){
             setInterval(typing, 200)
@@ -32,14 +38,27 @@
                 $('.middle>p').slideDown(1000);
             })
 
+            $(document).ready(function(){
+                $(".slider").bxSlider();
+            });
+
+            $('.box1>h2').click(function(){
+                window.open('./img/조말론최종.jpg','_blank')
+            })
+            $('.box2>h2').click(function(){
+                window.open('./img/제주꿀감귤상세페이지.jpg','_blank')
+            })
+            $('.box3>h2').click(function(){
+                window.open('./img/설렁탕상세페이지.jpg','_blank')
+            })
+            
+
         })
     </script>
     
-    <script>
-            
-    </script>
     <style>
         * {margin: 0; padding: 0; box-sizing: border-box; color: #333; font-family: 'NanumSquareRound';}
+        body {background-color: #eeecee;}
         ul {list-style: none;}
         a {text-decoration: none; color: inherit;}
         #wrap {
@@ -180,10 +199,135 @@
             left: 40%;
             z-index: 1;
         }
+
+        /* page3 */
+        #page3 {
+            width: 100%;
+            height: 900px;
+        }
+        .content1 {
+            width: 1200px;
+            height: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #page3 img {
+           width: 400px;
+           height: 500px;
+           margin-left: 100px;
+           padding: 50px;
+           border-radius: 100px;
+        }
+        #page3 img:hover {
+            opacity: 0.5;
+            transition: 1.2s;
+        }
+        .box1 , .box2, .box3 {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+        }
+        .box1>h2, .box2>h2 , .box3>h2 {
+            display: block;
+            width: 300px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 100px;
+            margin-bottom: 40px;
+            cursor: pointer;
+        }   
+       
+        .box1>ul>li , .box2>ul>li, .box3>ul>li {
+            margin-bottom: 20px;
+        }
+        .box1>ul>li>a, .box2>ul>li>a , .box3>ul>li>a {
+            display: block;
+            line-height: 20px;
+        }
+        /* page2 */
+        #page2 {
+            display: flex;
+            flex-flow: row wrap;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .profile {
+            width: 50%;
+            height: 300px;
+            margin-top: 200px;
+            
+        }
+        .profile>h2 , .charset>h2, .skill>h2, .edu>h2{
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            border-radius: 100px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+
+        }
+        .profile>ul , .charset>ul, .skill>ul, .edu>ul {
+            width: 400px;
+            margin: 0 auto;
+        }
+        .profile span , .charset span, .skill span, .edu span {
+            font-weight: bold;
+            
+        }
+        .profile>ul>li, .charset>ul>li, .skill>ul>li, .edu>ul>li {
+            margin-bottom: 20px;
+        }
+        .profile>ul>li>a, .charset>ul>li>a, .skill>ul>li>a, .edu>ul>li>a  {
+            display: block;
+            height: 20px;
+            line-height: 20px;
+        }
+        .charset {
+            margin-top: 200px;
+            width: 50%;
+            height: 300px;
+        }
+        .charset>ul {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .charset>ul>li {
+            width: 100px;
+        }
+        .skill {
+            width: 50%;
+            height: 300px;
+            margin-bottom: 200px;
+        }
+        .skill img {
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+        }
+        .skill>ul {
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .skill>ul>li {
+            width: 80px;
+            height: 80px;
+        }
+        .edu {
+            width: 50%;
+            height: 300px;
+            margin-bottom: 200px;
+        }
     </style>
 </head>
 <body>
     <div id="wrap">
+        <!-- page1 -->
         <div id="page1">
                 <div class="top">
                     <div class="text_box">
@@ -195,17 +339,103 @@
                 </div>
                 <div class="left">
                     <ul>
-                        <li><a href="#none">About me</a></li>
+                        <li><a href="#page2">About me</a></li>
                     </ul>
                 </div>
                 <div class="right">
                     <ul>
-                        <li><a href="#none">Referenced</a></li>
+                        <li><a href="#page3">Referenced</a></li>
                     </ul>
                 </div>
                 <div class="middle">
                     <p>"MD의 분석력과 디자이너의 감각을 하나로, <br>세상을 움직이는 페이지를 만듭니다." </p>
                 </div>
+        </div>
+        <!-- page2 -->
+        <div id="page2">
+            <div class="profile">
+                <h2>Profile</h2>
+                <ul>
+                    <li><a href="#none"><span>Name :</span> 장혜민</a></li>
+                    <li><a href="#none"><span>Brith :</span> 1995.09.04</a></li>
+                    <li><a href="#none"><span>Number :</span> 010-8477-4460</a></li>
+                    <li><a href="#none"><span>Adress :</span> 경기도 고양시 일산동구 백석동</a></li>
+                </ul>
+            </div>
+            <div class="charset">
+                <h2>Charset</h2>
+                <ul>
+                    <li><a href="#none"><span>#</span> 긍정적</a></li>
+                    <li><a href="#none"><span>#</span> 꼼꼼한</a></li>
+                    <li><a href="#none"><span>#</span> 친절함</a></li>
+                    <li><a href="#none"><span>#</span> 감각적</a></li>
+                    <li><a href="#none"><span>#</span> ISFJ</a></li>
+                    <li><a href="#none"><span>#</span> 멍집사</a></li>
+                </ul>
+            </div>
+            <div class="skill">
+                <h2>Skill</h2>
+                <ul>
+                    <li><a href="#none"><img src="./img/photoshop_5968520.png" alt="포토샵아이콘"></a></li>
+                    <li><a href="#none"><img src="./img/illustrator_5968472.png" alt="일러스트아이콘"></a></li>
+                    <li><a href="#none"><img src="./img/figma_5968705.png" alt="피그마아이콘"></a></li>
+                    <li><a href="#none"><img src="./img/html-5_5968267.png" alt="html아이콘"></a></li>
+                    <li><a href="#none"><img src="./img/css-3_5968242.png" alt="css아이콘"></a></li>
+                    <li><a href="#none"><img src="./img/js_5968292.png" alt="js아이콘"></a></li>
+                    <li><a href="#none"><img src="./img/jquery.png" alt="jquery아이콘"></a></li>
+
+                </ul>
+            </div>
+            <div class="edu">
+                <h2>Education</h2>
+                <ul>
+                    <li><a href="#none"><span>Name :</span> 장혜민</a></li>
+                    <li><a href="#none"><span>Brith :</span> 1995.09.04</a></li>
+                    <li><a href="#none"><span>Number :</span> 010-8477-4460</a></li>
+                    <li><a href="#none"><span>Adress :</span> 경기도 고양시 일산동구 백석동</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- page3 -->
+        <div id="page3">
+            <div class="content1">
+
+                <ul class="slider">
+                    <li><img src="./img/조말론표지최종.jpg" alt="조말론표지최종">
+                        <div class="box1">
+                            <h2>상세페이지 바로가기</h2>
+                            <ul>
+                                <li><a href="#none">"JOMALONE 리뉴얼 상세페이지"</a></li>
+                                <li><a href="#none">"기존 상세페이지의 적은 이미지와 가독성이 떨어지는 부분을 <br>보안하여 리뉴얼 디자인 하였습니다.
+                                    차분한 분위기와 세련된 느낌을 강조하여 <br>고급스러운 느낌을 전달 될 수 있도록 하였습니다."</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><img src="./img/제주꿀감귤표지.jpg" alt="감귤표지">
+                        <div class="box2">
+                            <h2>상세페이지 바로가기</h2>
+                            <ul>
+                                <li><a href="#none">"제주 꿀감귤 상세페이지"</a></li>
+                                <li><a href="#none">"스마트스토어 외 플랫폼 판매를 위한 상세페이지 기획 + 디자인 작업하였습니다. "</a></li>
+                                <li><a href="#none">"따뜻하고 밝은 느낌, 과일의 특징, 농장 직송 등 농부의 진심을 담은 포인트를 <br> 임팩트 있게 전달 될 수 있도록 하였습니다.  "</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><img src="./img/비비고설렁탕표지.jpg" alt="설렁탕표지">
+                        <div class="box3">
+                            <h2>상세페이지 바로가기</h2>
+                            <ul>
+                                <li><a href="#none">"비비고 설렁탕 리뉴얼 상세페이지"</a></li>
+                                <li><a href="#none">"친화적인 경험을 제공하는데 중점을 두어 디자인 작업하였습니다. "</a></li>
+                                <li><a href="#none">"나무 질감의 배경과 따뜻한 색상으로 전통의 느낌과 편안함을 주었고, <br>
+                                     판매 건수를 눈에 띄게 표시하여 신뢰성을 줄 수 있도록 하였습니다. "</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+
+            </div>
         </div>
     </div>
 </body>
